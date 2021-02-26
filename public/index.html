@@ -1,233 +1,207 @@
 <!DOCTYPE html>
 <html>
-<title>Azure tests</title>
+<title>hamachi.no</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- w3.css is unmodofed from w3schools.com -->
 <link rel="stylesheet" href="css/w3.css">
-<!-- colors generated using w3schools color generator -->
-<link rel="stylesheet" href="css/w3-custom-colors.css">
-<!-- Google fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400&display=swap"
-  rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Poller+One&display=swap" rel="stylesheet">
-<!-- Font Awesome TH -->
-<script src="https://kit.fontawesome.com/85720a3402.js" crossorigin="anonymous"></script>
-<!-- Font Awesome HD -->
-<!-- <script src="https://kit.fontawesome.com/2acb89f8cb.js" crossorigin="anonymous"></script> -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+  body,
   h1,
   h2,
-  h3 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
-    letter-spacing: 3px;
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Arial", sans-serif;
+    font-display: swap;
   }
 
-  .novologo {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
-    font-size: large;
-  }
-
-  .footerfont {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
+  /* headings: bold and extra character spacing */
+  h6 {
+    font-weight: 700;
     letter-spacing: 2px;
-    font-size: small;
   }
 
+  /* text on top of image: white, transparent bg, light font */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 100;
+    letter-spacing: 2px;
+    background-color: transparent;
+    color: #ddd;
+    white-space: nowrap;
+  }
+
+  /* body text light grey, extra line spacing */
   body,
   html {
-    font-family: 'Open Sans', sans-serif;
     height: 100%;
+    color: #222;
     line-height: 2;
   }
 
+  /* remove underlines from hyperlinks */
   a {
     text-decoration: none;
   }
 
   a:hover {
-    background-color: #3a6185;
+    background-color: #ccc;
   }
 
-  a.arrow:hover {
-    background-color: transparent;
+  /* Hero-image with parallax scrolling effect */
+  .bgimage {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #777;
+    min-height: 100%;
+  }
+
+  @media only screen and (max-width:812px) {
+    .bgimage {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url('img/michele-purin-unsplash-812x541.jpg');
+      background-attachment: scroll;
+    }
+  }
+
+  @media only screen and (min-width:813px) {
+    .bgimage {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url('img/michele-purin-unsplash-1800x1200.jpg');
+    }
   }
 </style>
 
-<body class="w3-theme-d1">
+<body>
 
-  <!-- Menu, using w3-hide* for responsiveness -->
+  <!-- Landing page header: Image with parallax-scrolling -->
+  <!-- The overlay text needs to be white w/transparent bg -->
 
-  <div class="w3-top">
-    <div class="w3-bar w3-theme-d3" id="topMenuBar">
-      <div class="w3-content" style="max-width:900px;">
-        <a href="#Top" class="w3-bar-item w3-button">
-          <span style="font-family:'Poller One';font-size:large;">NOVOTECH</span>
+  <div class="bgimage w3-display-container">
+    <!-- Title and tagline towards bottom, centered -->
+    <div class="w3-display-bottommiddle w3-padding w3-center" style="width:100%;">
+      <!-- <h1>hamachi</h1> -->
+      <img src="img/hamachi-final-01.png" alt="Hamachi" style="width:90%;max-width:400px">
+      <p style="color:#aaa;letter-spacing: 2px;">Trying not to leave a mess</p>
+
+      <!-- Down-arrow in lower right hand corner -->
+      <div class="w3-padding">
+        <h2><i class="fa fa-angle-down"></i></h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- The content is limited in width using 'w3-content' -->
+  <!-- Default width of w3-content is 960px -->
+
+  <div class="w3-content w3-margin-top" style="max-width:800px">
+
+    <!-- Section: What We Do -->
+
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-padding-16">
+        <h6>What</h6>
+      </div>
+      <div class="w3-rest w3-container w3-padding-16">
+        Hamachi invests in technology companies that develop
+        products and services
+        in line with
+        <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">
+          UN's Sustainable Development Goals
         </a>
-        <a href="#Contact" class="w3-bar-item w3-button w3-hide-small w3-right">Contact</a>
-        <a href="#Technology" class="w3-bar-item w3-button w3-hide-small w3-right">Technology</a>
-        <a href="#About" class="w3-bar-item w3-button w3-hide-small w3-right">About</a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-          onclick="clickBurger()">&#9776;</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Menu for small screens <600px -->
-
-  <div id="burger" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:38px">
-    <a href="#About" class="w3-bar-item w3-button w3-right w3-theme-d3" onClick="clickBurger()">About</a>
-    <a href="#Technology" class="w3-bar-item w3-button w3-theme-d3" onClick="clickBurger()">Technology</a>
-    <a href="#Contact" class="w3-bar-item w3-button w3-theme-d3" onClick="clickBurger()">Contact</a>
-  </div>
-
-  <!-- 3D demo -->
-
-  <div class="w3-display-container w3-padding-48">
-    <iframe id="novorender" src="https://novorender.com/explorer/2a8be585bdcd4d5194d727b7814cc86a"
-      style="width:100%;height:85vh; border:none;"></iframe>
-    <!-- Down arrow at bottom of page -->
-    <div class="w3-display-bottommiddle w3-padding-32 w3-animate-fading">
-      <a href="#About" class="arrow"><span style="font-size: 400%;"><i class="fal fa-chevron-down"></i></span></a>
-    </div>
-  </div>
-
-  <!-- Main Page Content Starts Here -->
-
-  <div class="w3-content" style="max-width:900px">
-
-    <!-- Section: NovoTech -->
-
-    <div class="w3-row w3-padding-24" id="About">
-      <div class="w3-third w3-container">
-        <h2>The Company</h2>
-      </div>
-      <div class="w3-rest w3-container">
-        NovoTech is a Norwegian software company and a technology leader in 3D visualization.
-        The NovoRender cloud allows engineering teams to share their advanced 3D-models with employees,
-        customers and business partners, regardless of 3D formats and file sizes.
-        By making 3D engineering drawings available to anyone at anytime, our customers can dramatically increase the
-        value of existing
-        3D models during the development of large projects.
-        <div class="w3-margin-top">
-          <img src="img/pic-desktop.jpg" alt="NovoTech in use on the desktop"
-            style="width:100%;height:10%;border:none;" />
-        </div>
       </div>
     </div>
 
     <!-- Section: Technologies -->
 
-    <div class="w3-row w3-padding-24" id="Technology">
-      <div class="w3-third w3-container">
-        <h2>The Technology</h2>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-padding-16">
+        <h6>Technologies</h6>
       </div>
-      <div class="w3-rest w3-container">
+      <div class="w3-rest w3-container w3-padding-16">
+        Sensors and monitoring –
+        we’re interested in sensor technologies and environmental monitoring.
+        Data collection is the first step towards quantifying the state
+        of the environment – indoor and outdoor,
+        in the air and below the surface
         <p>
-          The NovoRender cloud makes it possible to visualize endless amounts of 3D data using any browser on any
-          device.
-          First, NovoRender combines 3D models in different formats to create the full scene.
-          Next, NovoRender splits the combined 3D model into small chunks.
-          Finally, the small chunks are streamed on demand to the viewer, dependent on which part of the scene is being
-          displayed.</p>
+          Analytics and visualization –
+          cloud and big data technologies that turn data into information,
+          using advanced visualization technologies to make the data
+          easily accessible to all
+        </p>
         <p>
-          This is different from the traditional way of viewing 3D models which is based on sending the entire 3D file
-          to the viewer before rendering the scene.
-          By splitting large models into small chunks and stremaing them on an as-needed basis,
-          any 3D model can be visualized on any device with a web-browser.
-          In addition, access to metadata is enabled, allowing the user to click on and inspect any element in the
-          scene.
-          No plugins or downloads are required.</p>
-      </div>
-    </div>
-
-    <!-- Section: How it works -->
-
-    <div class="w3-row w3-padding-24" id="About">
-      <div class="w3-third w3-container">
-        <h2>How it Works</h2>
-      </div>
-      <div class="w3-rest w3-container">
-        <iframe src="https://player.vimeo.com/video/265731978?title=0&byline=0&portrait=0"
-          style="width:100%;height:360px;border:none;" allow="autoplay; fullscreen" allowfullscreen>
-        </iframe>
+          Communication and collaboration –
+          visual communication is fantastic for meeting more often
+          while avoiding the negative environmental impact of travel.
+          New real time messaging technologies drive efficiencies
+          and engagement
+        </p>
       </div>
     </div>
 
-    <!-- Section: Contact -->
+    <!-- Third section: Investments -->
 
-    <div class="w3-row w3-padding-24" id="Contact">
-      <div class="w3-third w3-container">
-        <h2>Contact Us</h2>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-padding-16">
+        <h6>Projects</h6>
       </div>
-      <div class="w3-rest w3-container">
-        <p>
-          <a href="mailto:info@novotech.no">
-            <i class="fal fa-envelope w3-hover-opacity"></i>&nbsp;&nbsp;
-            info@novotech.no</a>
-        </p>
-        <p>
-          <a href="tel: +4748280270">
-            <i class="fal fa-phone w3-hover-opacity"></i>&nbsp;&nbsp;
-            +47 48280270</a>
-        </p>
-        <p>
-          <a href="https://goo.gl/maps/w33r3ebej3tbH2cK7">
-            <i class="fal fa-map-marker-alt w3-hover-opacity"></i>&nbsp;&nbsp;
-            Gamle Forusveien 11, 4033 Stavanger, Norway</a>
-        </p>
-        <p><a href="https://www.facebook.com/NovoTechAS/" target="_blank" rel="noreferrer">
-            <i class="fab fa-facebook-square"></i>&nbsp;&nbsp;
-            NovoTechAS</a>
-        </p>
-        <p><a href="https://www.linkedin.com/company/novotechas/" target="_blank" rel="noreferrer">
-            <i class="fab fa-linkedin w3-hover-opacity"></i>&nbsp;&nbsp;
-            NovoTechAS</a>
-        </p>
+      <div class="w3-rest w3-container w3-padding-16">
+        <ul class="w3-ul w3-hoverable">
+          <li><a rel="noopener noreferrer" href="https://pexip.com">Pexip</a></li>
+          <li><a rel="noopener noreferrer" href="https://noisolation.com">No Isolation</a></li>
+          <li><a rel="noopener noreferrer" href="https://novotech.no">Novotech</a></li>
+          <li><a rel="noopener noreferrer" href="https://prepp.io">Prepp</a></li>
+          <li><a rel="noopener noreferrer" href="https://hu.ma">Huma</a></li>
+          <li><a rel="noopener noreferrer" href="https://anzyz.com">Anzyz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section: About & Contact -->
+
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-padding-16">
+        <h6>About</h6>
+      </div>
+      <div class="w3-rest w3-container w3-padding-16">
+        <p>Founded: 2012</p>
+        <p>Contact: hd@hamachi.no</p>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer with social media icons and credits -->
 
-  <footer class="w3-center">
-    <div class="w3-center w3-padding footerfont">
-      &copy; Copyright 2020 NovoTech AS
+  <footer class="w3-center w3-padding">
+    <div class="w3-large w3-section">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>
+    <div class="w3-center w3-padding" style="font-weight:100;">
+      design by
+      <a href="https://hamachi.no">
+        hamachi.no
+      </a>
+      <br>
+      photo by
+      <a rel="noopener noreferrer" href="https://unsplash.com/@michele_purin">
+        michele purin, unsplash.com
+      </a>
     </div>
   </footer>
-
-  <!-- Burger menu handler -->
-  <!-- Change navbar style on scroll -->
-
-  <script>
-    function clickBurger() {
-      var x = document.getElementById("burger");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-    window.onscroll = function () { navBarOnScroll() };
-    function navBarOnScroll() {
-      return;
-      // code below replaces navbar-theme when scrolling down
-      // we are not using this functionality now
-      var navbar = document.getElementById("topMenuBar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-theme-d3";
-      } else {
-        navbar.className = navbar.className.replace(" w3-theme-d3", "");
-      }
-    }
-  </script>
 
 </body>
 
